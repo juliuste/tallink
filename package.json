@@ -18,7 +18,7 @@
   "bugs": "https://github.com/juliuste/tallink/issues",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
     "lib/*"
   ],
   "dependencies": {
