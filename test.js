@@ -34,8 +34,9 @@ tape('tallink.journeys', (t) => {
 tape('tallink.stations', (t) => {
 	tallink.stations()
 	.then((stations) => {
-		t.plan(3)
+		t.plan(4)
 		t.true(stations.length, 'stations count')
+		t.true(stations[0].type==='station', 'station type')
 		t.true(stations[0].id, 'station id')
 		t.true(stations[0].name, 'station name')
 	})
