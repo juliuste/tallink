@@ -1,6 +1,6 @@
 # tallink
 
-JavaScript client for the [tallink](https://tallink.com) ferry journey API. Uses the [friendly public transport format](https://github.com/public-transport/friendly-public-transport-format) (`FPTF 0.0`).
+JavaScript client for the [tallink](https://tallink.com) ferry journey API. Complies with the [friendly public transport format](https://github.com/public-transport/friendly-public-transport-format) (`FPTF 0.0`).
 
 [![npm version](https://img.shields.io/npm/v/tallink.svg)](https://www.npmjs.com/package/tallink)
 [![Build Status](https://travis-ci.org/juliuste/tallink.svg?branch=master)](https://travis-ci.org/juliuste/tallink)
@@ -87,8 +87,8 @@ would give you
 				id: "hel",
 				pier: "LSA2"
 			},
-			departure: "2017-03-02T07:30:00.000Z",
-			arrival: "2017-03-02T09:30:00.000Z",
+			departure: "2017-03-02T07:30:00.000Z", // Date() Object
+			arrival: "2017-03-02T09:30:00.000Z", // Date() Object
 			ship: "MEGASTAR",
 			rooms: true,
 			operator: "tallink",
