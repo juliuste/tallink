@@ -1,6 +1,6 @@
 # tallink
 
-JavaScript client for the [tallink](https://tallink.com) ferry journey API.
+JavaScript client for the [tallink](https://tallink.com) ferry journey API. Uses the [friendly public transport format](https://github.com/public-transport/friendly-public-transport-format) (`FPTF 0.0`).
 
 [![npm version](https://img.shields.io/npm/v/tallink.svg)](https://www.npmjs.com/package/tallink)
 [![Build Status](https://travis-ci.org/juliuste/tallink.svg?branch=master)](https://travis-ci.org/juliuste/tallink)
@@ -20,7 +20,7 @@ npm install tallink
 const tallink = require('tallink')
 ```
 
-The `tallink` module bundles two methods: `stations()` and `routes()`.
+The `tallink` module bundles two methods: [`stations()`](#stations) and [`journeys()`](#journeysoriginid-destinationid-startdate-enddate-opt) which follow `[FPTF](https://github.com/public-transport/friendly-public-transport-format) 0.0`.
 
 ### stations()
 
@@ -34,26 +34,26 @@ would give you
 
 ```js
 [
-	{id: "hel", name: "Helsinki"},
-	{id: "tal", name: "Tallinn"},
-	{id: "sto", name: "Stockholm"},
-	{id: "tur", name: "Turku"},
-	{id: "rig", name: "Riga"},
-	{id: "ala", name: "Åland"},
-	{id: "vis", name: "Visby"}
+	{type: "station", id: "hel", name: "Helsinki"},
+	{type: "station", id: "tal", name: "Tallinn"},
+	{type: "station", id: "sto", name: "Stockholm"},
+	{type: "station", id: "tur", name: "Turku"},
+	{type: "station", id: "rig", name: "Riga"},
+	{type: "station", id: "ala", name: "Åland"},
+	{type: "station", id: "vis", name: "Visby"}
 ]
 ```
 
-### routes(fromID, toID, startDate, endDate, opt)
+### journeys(originID, destinationID, startDate, endDate, opt)
 
-Find routes for a given time period (in days). Returns a `Promise` that resolves in a list of matching routes.
+Find journeys for a given time period (in days). Returns a `Promise` that resolves in a list of matching journeys.
 
 ```js
-tallink.routes(fromID, toID, startDate, endDate, opt).then(…)
-tallink.routes(
+tallink.journeys(originID, destinationID, startDate, endDate, opt).then(…)
+tallink.journeys(
 	'tal', // Tallinn
 	'hel', // Helsinki
-	new Date('2017-03-03T00:00:00'),
+	new Date('2017-03-02T00:00:00'),
 	new Date('2017-03-05T00:00:00'), // setting this to the same day as startDate would give you results for a single day
 	// default options
 	{
@@ -67,27 +67,41 @@ tallink.routes(
 would give you
 
 ```js
-[{
-	id: '1565204',
-	ship: 'MEGASTAR',
-	route: {
-		id: 'TAL-HEL',
-		name: 'Tallinn-Helsinki'
-	},
-	from: {
-		id: 'TAL',
-		pier: 'DTER'
-	},
-	to: {
-		id: 'HEL',
-		pier: 'LSA2'
-	},
-	departure: '2017-03-03T07:30:00.000Z', // Date() object
-	arrival: '2017-03-03T09:30:00.000Z', // Date() object
-	price: 32,
-	overnight: false,
-	rooms: true
-}, …]
+[
+	{
+		type: "journey",
+		id: "1565203",
+		routeInfo: {
+			id: "tal-hel",
+			name: "Tallinn-Helsinki"
+		},
+		overnight: false,
+		legs: [{
+			origin: {
+				type: "station",
+				id: "tal",
+				pier: "DTER"
+			},
+			destination: {
+				type: "station",
+				id: "hel",
+				pier: "LSA2"
+			},
+			departure: "2017-03-02T07:30:00.000Z",
+			arrival: "2017-03-02T09:30:00.000Z",
+			ship: "MEGASTAR",
+			rooms: true,
+			operator: "tallink",
+			mode: "ferry",
+			public: true
+		}],
+		price: {
+			amount: 36,
+			currency: "EUR"
+		}
+	}
+	// …
+]
 ```
 
 ## Contributing
