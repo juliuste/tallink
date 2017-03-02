@@ -20,7 +20,7 @@ npm install tallink
 const tallink = require('tallink')
 ```
 
-The `tallink` module bundles two methods: [`stations()`](#stations) and [`journeys()`](#journeysoriginid-destinationid-startdate-enddate-opt) which follow `[FPTF](https://github.com/public-transport/friendly-public-transport-format) 0.0`.
+The `tallink` module bundles two methods: [`stations()`](#stations) and [`journeys()`](#journeysoriginid-destinationid-startdate-enddate-opt) which follow [`FPTF`](https://github.com/public-transport/friendly-public-transport-format) `0.0`.
 
 ### stations()
 
