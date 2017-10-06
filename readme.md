@@ -26,7 +26,7 @@ The `tallink` module bundles two methods: [`stations()`](#stations) and [`journe
 
 tallink network. Returns a `Promise` that resolves in a list of all stations:
 
-```js 
+```js
 tallink.stations().then(…)
 ```
 
