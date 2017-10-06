@@ -1,7 +1,5 @@
 # tallink
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/tallink.svg)](https://greenkeeper.io/)
-
 JavaScript client for the [tallink](https://tallink.com) ferry journey API. Complies with the [friendly public transport format](https://github.com/public-transport/friendly-public-transport-format) (`FPTF 0.0`).
 
 [![npm version](https://img.shields.io/npm/v/tallink.svg)](https://www.npmjs.com/package/tallink)
@@ -28,7 +26,7 @@ The `tallink` module bundles two methods: [`stations()`](#stations) and [`journe
 
 tallink network. Returns a `Promise` that resolves in a list of all stations:
 
-```js 
+```js
 tallink.stations().then(…)
 ```
 
