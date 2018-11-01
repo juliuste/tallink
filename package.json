@@ -1,48 +1,48 @@
 {
-  "name": "tallink",
-  "version": "0.2.0",
-  "description": "Client for the tallink API",
-  "keywords": [
-    "estonia",
-    "europe",
-    "ferry",
-    "finland",
-    "germany",
-    "scandinavia",
-    "sweden",
-    "tallink"
-  ],
-  "homepage": "https://github.com/juliuste/tallink",
-  "bugs": "https://github.com/juliuste/tallink/issues",
-  "repository": "juliuste/tallink",
-  "license": "ISC",
-  "author": "Julius Tens <mail@juliustens.eu>",
-  "files": [
-    "lib/*"
-  ],
-  "main": "lib/index.js",
-  "scripts": {
-    "check-deps": "depcheck",
-    "fix": "eslint --fix lib",
-    "lint": "eslint lib",
-    "prepublishOnly": "npm test",
-    "test": "npm run lint && npm run check-deps && node test"
-  },
-  "dependencies": {
-    "got": "^8.0.0",
-    "moment": "^2.17.1"
-  },
-  "devDependencies": {
-    "depcheck": "^0.6.11",
-    "eslint": "^5.8.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^8.0.0",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "tape": "^4.9.1"
-  },
-  "engines": {
-    "node": ">=8"
-  }
+	"name": "tallink",
+	"version": "0.2.0",
+	"description": "Client for the tallink API",
+	"keywords": [
+		"estonia",
+		"europe",
+		"ferry",
+		"finland",
+		"germany",
+		"scandinavia",
+		"sweden",
+		"tallink"
+	],
+	"homepage": "https://github.com/juliuste/tallink",
+	"bugs": "https://github.com/juliuste/tallink/issues",
+	"repository": "juliuste/tallink",
+	"license": "ISC",
+	"author": "Julius Tens <mail@juliustens.eu>",
+	"files": [
+		"lib/*"
+	],
+	"main": "lib/index.js",
+	"scripts": {
+		"check-deps": "depcheck",
+		"fix": "eslint --fix lib",
+		"lint": "eslint lib",
+		"prepublishOnly": "npm test",
+		"test": "npm run lint && npm run check-deps && node test"
+	},
+	"dependencies": {
+		"got": "^8.0.0",
+		"moment": "^2.17.1"
+	},
+	"devDependencies": {
+		"depcheck": "^0.6.11",
+		"eslint": "^5.8.0",
+		"eslint-config-standard": "^12.0.0",
+		"eslint-plugin-import": "^2.14.0",
+		"eslint-plugin-node": "^8.0.0",
+		"eslint-plugin-promise": "^4.0.1",
+		"eslint-plugin-standard": "^4.0.0",
+		"tape": "^4.9.1"
+	},
+	"engines": {
+		"node": ">=8"
+	}
 }
