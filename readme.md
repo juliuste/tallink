@@ -5,8 +5,6 @@ JavaScript client for the [tallink](https://tallink.com) ferry journey API. Comp
 [![npm version](https://img.shields.io/npm/v/tallink.svg)](https://www.npmjs.com/package/tallink)
 [![Build Status](https://travis-ci.org/juliuste/tallink.svg?branch=master)](https://travis-ci.org/juliuste/tallink)
 [![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/tallink.svg)](https://greenkeeper.io/)
-[![dependency status](https://img.shields.io/david/juliuste/tallink.svg)](https://david-dm.org/juliuste/tallink)
-[![dev dependency status](https://img.shields.io/david/dev/juliuste/tallink.svg)](https://david-dm.org/juliuste/tallink#info=devDependencies)
 [![license](https://img.shields.io/github/license/juliuste/tallink.svg?style=flat)](LICENSE)
 [![chat on gitter](https://badges.gitter.im/juliuste.svg)](https://gitter.im/juliuste)
 
