@@ -1,7 +1,7 @@
 'use strict'
 
 const tape = require('tape')
-const tallink = require('./index')
+const tallink = require('.')
 
 tape('tallink.journeys', (t) => {
 	tallink.journeys('tal', 'hel', new Date(), new Date(), {locale: 'en'})
